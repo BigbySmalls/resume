@@ -80,6 +80,25 @@ a:focus {
     font-weight: 400;
 }
 
+/* Sidebar Download Link */
+
+.sidebar-download {
+    display: block;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: all var(--transition-speed);
+}
+
+.sidebar-download:hover {
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+}
+
 /* Contact Section */
 
 .contact-section {
@@ -384,13 +403,6 @@ a:focus {
     margin-top: auto;
 }
 
-.download-link {
-    color: var(--accent);
-    font-weight: 500;
-    display: inline-block;
-    margin-bottom: 0.5rem;
-}
-
 .copyright {
     color: var(--text-muted);
     font-size: 0.85rem;
@@ -474,7 +486,7 @@ a:focus {
 @media print {
     /* Hide interactive elements */
     .theme-toggle,
-    .download-link,
+    .sidebar-download,
     .site-footer {
         display: none !important;
     }
