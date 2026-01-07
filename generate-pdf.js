@@ -44,8 +44,9 @@ const { exec } = require('child_process');
     console.error("!!! SCRIPT FAILED !!!");
     console.error(error);
     process.exit(1);
-  } finally {
+} finally {
     console.log("Cleaning up server...");
-    server.kill();
+    server.kill(); // Attempt 1: Ask nicely
+    process.exit(0); // Attempt 2: The "Hard Stop" (Add this line!)
   }
 })();
